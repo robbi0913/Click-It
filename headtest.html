@@ -1,69 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            HTML Element
-        </title>
-        <style>
-            body {
-                background: linear-gradient(to right, #a7a9f4, #3a4b82);
-            }
-            h1 {
-                font-family: Verdana;
-                display:flex;
-                justify-content: center;
-            }
-            .buts {
-                display:flex;
-                justify-content: center;
-            }
-            button {
-                margin: 10px;
-                padding: 10px;
-                font-size: 16px;
-                font-family: Verdana;
-                background-color: rgb(173, 216, 230);
-                border: none;
-                border-radius: 5px;
-            }
-            button:hover {
-                transition: 100ms;
-                transform: scale(0.99);
-                cursor: pointer;
-                background-color: rgb(103, 196, 225);
-            }
-            .box {
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 100px;
-                background-color: rgba(255, 255, 255, 0.3);
-                border-radius: 10em;
-                padding: 20px;
-            }
-        </style>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="box"><h1 id="headtest">temp, will be replaced</h1>
-        <div class="buts">
-        <button id="but">Change to Green</button>
-        <button id="but2">Change to Red</button></div>
-        </div>
-        <script>
-            var heading = document.getElementById("headtest");
-                heading.innerHTML = "Robbi A. Perez";
-                heading.style.color = "black";
-            var button = document.getElementById("but");
-                button.addEventListener("click", function() {
-                heading.style.color = "green";
-            var button = document.getElementById("but2");
-                button.addEventListener("click", function() {
-                heading.style.color = "red";
-                })
-            });
-        </script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Target</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            flex-direction: column;
+        }
+        .target {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            cursor: pointer;
+            transition: left 0.5s, top 0.5s;
+        }
+        .score {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="score" id="score">Score: 0</div>
+    <div class="target" id="target"></div>
+    <audio id="sfx" src="pistol-shot.mp3"></audio>
+
+    <script>
+        const target = document.getElementById('target');
+        const scoreDisplay = document.getElementById('score');
+        const sfx = document.getElementById('sfx');
+        let score = 0;
+
+        target.addEventListener('click', () => {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            sfx.play();
+            moveTarget();
+        });
+
+        function moveTarget() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            target.style.left = `${x}px`;
+            target.style.top = `${y}px`;
+        }
+
+        moveTarget();
+    </script>
+</body>
 </html>
