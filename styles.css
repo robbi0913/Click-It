@@ -10,9 +10,11 @@ body {
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    overscroll-behavior: none;
 }
+
+/* NAVIGATION BAR */
+
 #title {
     color: white;
     font-size: 3em;
@@ -54,6 +56,9 @@ body {
     border-radius: 0.5em;
     transition: background-color 0.3s ease; 
 }
+
+/* aSIDE BAR */
+
 aside {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(100px);
