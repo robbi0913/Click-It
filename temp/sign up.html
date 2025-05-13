@@ -1,0 +1,28 @@
+
+<!-- Sign Up Form -->
+    <div id="signup-form-container" style="display: none;">
+        <button class="exit-btn" id="exit-btn">&times;</button>
+            <h3>Create an Account</h3>
+                <div id="feedback" class="feedback"></div>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required placeholder="Enter username" />
+                        </div>    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required placeholder="Create a password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password" />
+                        </div>
+                            <button type="button" id="signup-btn" class="submit-button">Sign Up</button>
+                    </form>
+                </div>
+    </div>
+    <script src="signup.js"></script>  

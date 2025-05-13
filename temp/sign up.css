@@ -1,0 +1,218 @@
+/* SIGN UP AND LOGIN */
+#signup-form-container {
+  position: fixed; /* Ensures the overlay stays in place */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  width: 400px; /* Set a fixed width */
+  background-color: rgba(0, 0, 0, 0.911); /* Background color for the form */
+  padding: 20px; /* Add padding inside the form */
+  box-shadow: 0 4px 8px rgba(59, 59, 59, 0.925); /* Add a shadow for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  z-index: 1000; /* Ensure it appears above other elements */
+  display: none; /* Initially hidden */
+} 
+
+h3 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 1px 0px 5px rgba(241, 136, 50, 0.973);
+}
+
+#signup-form-container .exit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#signup-form-container .feedback {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: red;
+}
+
+#signup-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+#signup-form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#signup-form-container .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333030;
+    border-radius: 4px;
+}
+
+#signup-form-container .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1852000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#signup-form-container .submit-button:hover {
+  background-color: #f8f8f800;
+  box-shadow: 0 0 5px 3px  #e31a6d;
+  color:#ffffff
+}
+
+.exit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 3px  rgb(255, 115, 0);
+  color: rgb(230, 224, 224);
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exit-btn:hover {
+  box-shadow: 0 0 5px 3px  #e31a6d;
+  transform: scale(1.1);
+}
+
+.feedback {
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: white;
+  text-shadow: 1px 0px 5px #e31a6d; 
+
+}
+
+.form-group input {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 3px  rgb(233, 98, 35);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:hover{
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 3px  #c036db;
+}
+.form-group input:focus {
+  outline: none;
+}
+
+.submit-button {
+  box-shadow: 0 0 5px 3px  rgb(233, 98, 35);
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(182, 129, 129, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 3px  #c036db;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  #signup-form-container {
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  .button, .submit-button {
+    width: 100%;
+  }
+}
+
+
+.mainbox {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.button{
+  font-size: 20px;
+  margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px 3px rgb(197, 96, 28);
+    text-shadow: 1px 0px 5px #c036db;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    left: 950px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 19px;
+    
+}
+
+.button:hover {
+  box-shadow: 0 0 5px 3px #c036db;
+  text-shadow: 1px 0px 5px aqua;
+  transform: scale(1.1);
+}
+.box1 {
+  display: flex;
+  margin-top: ;
+  gap: 20px;
+}
+
+#show-signup-btn {
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px 3px rgb(197, 96, 28);
+    text-shadow: 1px 0px 5px #c036db;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    left: 1120px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 19px;
+    
+}
+
+#show-signup-btn:hover {
+  box-shadow: 0 0 5px 3px #c036db;
+  text-shadow: 1px 0px 5px aqua;
+  transform: scale(1.1);
+}
