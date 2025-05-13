@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
+body {
+    font-family: Inter;
+    background: url('background.gif');
+    background-color: black;
+    background-size: 100vw;
+    background-repeat:space;
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+
+/* NAVIGATION BAR */
+
+#title {
+    color: white;
+    font-size: 3em;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    justify-content: center;
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    width: 100%;
+    backdrop-filter: blur(100px);
+    padding: 0.75em;
+    display: grid;
+        grid-template-columns: 0fr 2fr 1fr;
+}
+.logo {
+    width: 3em;
+    height: 3em;
+    margin: 0.5em;
+}
+
+.logs {
+    display: flex;
+    justify-content: right;
+    padding-right: 1em;
+}
+
+#log-button {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5em;
+    cursor: pointer; 
+
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    margin: 0.25rem;
+    min-width: fit-content;
+    padding-right: 30px;
+    padding-left: 30px;
+    transition: all 200ms ease-in-out;
+}
+
+#log-button:hover {
+    transform: scale(0.96);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* aSIDE BAR */
+
+aside {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(100px);
+    max-width: 20%;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 10px;
+    display: block;
+    min-width: 350px;
+}
+aside ul li {
+    background: linear-gradient(to right, #ffa11e12 0%, #ffa11e9e 100%);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 2rem;
+    margin-top: 5px;
+    padding: 10px 0px 10px 5px;
+    border-radius: 0.5em;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+ .sidebar li .homebutton { /* This is for the clickable logo */
+    display: inline-block;  
+    position: absolute;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+
+aside ul li:hover {
+    transform: scale(0.96);
+    box-shadow: inset 10px 10px 100px#00000012;
+}
+
+.icon {
+    aspect-ratio:initial;
+    width:  40px;
+    height: 40px;
+    justify-self: center;
+    margin: 0px 20px 2px 5px;
+}
+
+.contain {
+    display: inline-flex;
+}
+
+.containaside {
+    display: absolute;
+}
+
+/* ARTICLE HEREEEEEE */
+
+article {
+    padding: 1rem;
+    
+}
+
+/* SIGN UP AND LOGIN */
+#signup-form-container {
+  position: fixed; /* Ensures the overlay stays in place */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  width: 400px; /* Set a fixed width */
+  background-color: rgba(0, 0, 0, 0.911); /* Background color for the form */
+  padding: 20px; /* Add padding inside the form */
+  box-shadow: 0 4px 8px rgba(59, 59, 59, 0.925); /* Add a shadow for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  z-index: 1000; /* Ensure it appears above other elements */
+  display: none; /* Initially hidden */
+} 
+
+h3 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 1px 0px 5px rgba(241, 136, 50, 0.973);
+}
+
+#signup-form-container .exit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#signup-form-container .feedback {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: red;
+}
+
+#signup-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+#signup-form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#signup-form-container .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333030;
+    border-radius: 4px;
+}
+
+#signup-form-container .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1852000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#signup-form-container .submit-button:hover {
+  background-color: #f8f8f800;
+  box-shadow: 0 0 5px 3px  #e31a6d;
+  color:#ffffff
+}
+
+.exit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 3px  rgb(255, 115, 0);
+  color: rgb(230, 224, 224);
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exit-btn:hover {
+  box-shadow: 0 0 5px 3px  #e31a6d;
+  transform: scale(1.1);
+}
+
+
+
+.feedback {
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: white;
+  text-shadow: 1px 0px 5px #e31a6d; 
+
+}
+
+.form-group input {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 3px  rgb(233, 98, 35);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:hover{
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 3px  #c036db;
+}
+.form-group input:focus {
+  outline: none;
+}
+
+.submit-button {
+  box-shadow: 0 0 5px 3px  rgb(233, 98, 35);
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(182, 129, 129, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 5px 3px  #c036db;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  #signup-form-container {
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  .button, .submit-button {
+    width: 100%;
+  }
+}
+
+
+.mainbox {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.button{
+  font-size: 20px;
+  margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px 3px rgb(197, 96, 28);
+    text-shadow: 1px 0px 5px #c036db;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    left: 950px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 19px;
+    
+}
+
+.button:hover {
+  box-shadow: 0 0 5px 3px #c036db;
+  text-shadow: 1px 0px 5px aqua;
+  transform: scale(1.1);
+}
+.box1 {
+  display: flex;
+  margin-top: 20vh;
+  gap: 20px;
+}
+
+#show-signup-btn {
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px 3px rgb(197, 96, 28);
+    text-shadow: 1px 0px 5px #c036db;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    left: 1120px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 19px;
+    
+}
+
+#show-signup-btn:hover {
+  box-shadow: 0 0 5px 3px #c036db;
+  text-shadow: 1px 0px 5px aqua;
+  transform: scale(1.1);
+}

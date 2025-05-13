@@ -4,30 +4,96 @@
     <meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click-It</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
+
+<!-- this is where the header is -->
+
     <header>
         <nav class="navbar">
             <img src="pictures\logo.png" alt="Logo" class="logo">
             <a id="title" href="menu.html"><em>CLICK'T</em></a>
 
-            <div class="logs">
-            <a id="log-button" href="login.html">Sign Up</a>
-            <a id="log-button" href="login.html">Log In</a></div>
+            <a class="box1">
+                <button class="button" id="get-started-btn">Log In </button>
+                <button class="button" id="show-signup-btn">Sign Up </button>
+            </a>
         </nav>
     </header>
-    <aside class="sidebar">
-        <ul class="sidebar">
-            <li id="profileicon"> <img class="icon" src="pictures\user60.png">       <a class="homebutton" href="home.html">         PROFILE</a></li>
-            <li> <img class="icon" src="pictures\play.png">          <a class="homebutton" href="about.html">        PLAY</a></li>
-            <li> <img class="icon" src="pictures\clock60.png">         <a class="homebutton" href="services.html">     HISTORY</a></li>
-            <li> <img class="icon" src="pictures\leaderboard.png">   <a class="homebutton" href="leaderboard.html">  LEADERBOARD</a></li>
-            <li> <img class="icon" src="pictures\help.png">      <a class="homebutton" href="tutorial.html">     TUTORIAL</a></li>
-        </ul>
-    </aside>
-    <aside class="socmed">
-        <h3>Contact Us:</h3>
-    </aside>
+<!-- Sign Up Form -->
+    <div id="signup-form-container" style="display: none;">
+        <button class="exit-btn" id="exit-btn">&times;</button>
+            <h3>Create an Account</h3>
+                <div id="feedback" class="feedback"></div>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" required placeholder="Enter username" />
+                        </div>    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required placeholder="Create a password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password" />
+                        </div>
+                            <button type="button" id="signup-btn" class="submit-button">Sign Up</button>
+                    </form>
+                </div>
+    </div>
+    <script src="signup.js"></script>            
+
+    <div class="contain">
+
+        <!-- this is where the side menu is -->
+        
+        <div class="containaside">
+
+            <aside class="sidebar">
+                <ul class="sidebar">
+                    <li id="profileicon"> <img class="icon" src="pictures\user60.png">       <a class="homebutton" href="home.html">         PROFILE</a></li>
+                    <li> <img class="icon" src="pictures\play.png">                 <a class="homebutton" href="about.html">        PLAY</a></li>
+                    <li> <img class="icon" src="pictures\clock60.png">         <a class="homebutton" href="services.html">     HISTORY</a></li>
+                    <li> <img class="icon" src="pictures\leaderboard.png">   <a class="homebutton" href="leaderboard.html">  LEADERBOARD</a></li>
+                    <li> <img class="icon" src="pictures\help.png">      <a class="homebutton" href="tutorial.html">     TUTORIAL</a></li>
+                </ul>
+            </aside>
+            
+            <aside class="socmed">
+                <ul class="sidebar">
+                    <h3>Contact Us:</h3>
+                    <li> <img class="icon" src="pictures\facebook.png">      <a class="homebutton" href="home.html">        FACEBOOK</a></li>
+                    <li> <img class="icon" src="pictures\x.png">             <a class="homebutton" href="about.html">       X / TWITTER</a></li>
+                    <li> <img class="icon" src="pictures\gmail.png">         <a class="homebutton" href="services.html">    MAIL</a></li>
+                </ul>
+            </aside>
+            
+        </div>
+        
+        <!-- this is where the content is -->
+        
+        <article>
+
+        
+        <h2>Welcome to Click't!</h2>
+        
+        <p>
+            The ultimate destination for sharpening your aim and boosting your gaming performance! Whether you’re a
+            casual gamer looking to improve or a competitive player striving for the top, our aim trainer offers
+            tailored exercises and real-time feedback to help you hit your targets with precision. Dive into a variety
+            of challenges, track your progress, and become the sharpshooter you’ve always aspired to be. Ready to take
+            your skills to the next level? Let’s get started!
+        </p>
+        
+        </article>
+    
+    </div>
+
 </body>
 </html>
