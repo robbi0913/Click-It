@@ -152,10 +152,11 @@ article {
 
 #game-area {
  position: relative;
- width: 90vw;
+ width: 70vw;
  height: 50vh;
  margin: 40px auto 0 auto;
  overflow: hidden;
+ background-color: black;
 }
 
 #target {
@@ -186,24 +187,35 @@ article {
     backdrop-filter: (20px);
 }
 
+#target:active {
+    animation: pop 0.2s;
+}
+
+@keyframes pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.3); }
+    100% { transform: scale(1), background-color:white; }
+}
+
 #timer, #score {
   color: #ffa11e;
 }
 #start-btn {
-  font-size: 1.3em;
-  color: white;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(100px);
-  border: none;
-  padding: 0.5em 2em;
-  border-radius: 0.5em;
-  display: block;
-  margin: 2em auto 0 auto;
+    font-size: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(100px);
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 0.5em;
+    display: block;
+    margin: 2em auto 0 auto;
 }
 
 #start-btn:hover {
-    transform: 
+    transform: scale(0.9);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 /* INFORMATION / TUTORIAL PAGE  */
