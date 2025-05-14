@@ -180,7 +180,6 @@ article {
 #infocontent {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: (10px);
-    padding: 1rem;
 }
 
 .gamebody {
@@ -201,6 +200,10 @@ article {
   border-radius: 0.5em;
   display: block;
   margin: 2em auto 0 auto;
+}
+
+#start-btn:hover {
+    transform: 
 }
 
 /* INFORMATION / TUTORIAL PAGE  */
