@@ -171,12 +171,24 @@ article {
     border-radius: 50%;
 }
 
+#target2 {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background: orange;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+}
+
 #info {
     display: flex;
     gap: 1em;
     text-align: center;
+    margin: 0px auto 0 auto;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    
 }
 
 #infocontent {
