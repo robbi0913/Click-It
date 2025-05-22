@@ -5,6 +5,28 @@
     text-decoration: none;
     user-select: none;
 }
+@media screen and (max-width: 900px) {
+    body {
+        background: size 100vh;
+        font-size: xx-small;
+    }
+    #target {
+        width: 20vw;
+        height: 20vh;      
+    }
+    div#game-area {
+        width: 95%;
+    }
+    .infotext {
+    }
+    article {
+        display: none;
+    }
+    .containaside {
+        width: max-content;
+        margin: 4vw;  
+    }
+}
 
 body {
     font-family: Gill Sans, sans-serif;
